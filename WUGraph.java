@@ -28,7 +28,7 @@ public class WUGraph{
     void loadGraph(String filename){
         try{
             BufferedReader reader = new BufferedReader(new FileReader(filename));
-            String line;
+            String line;//
             line = reader.readLine();
             String [] num = line.split(",");
             numOFNodes = Integer.parseInt(num[0]);
@@ -47,6 +47,9 @@ public class WUGraph{
                 Edge e = new Edge(id,cost,from,to);
                 nodes.get(from).addEdge(e);
                 edges.add(e);
+                nodes.get(to).addEdge(e);
+                //System.out.println("id:"+id+" from:"+from+" to:"+to+" cost:"+cost);
+                //System.out.println("ノード"+from+"にエッジ"+id+"を追加");
             }  
             reader.close();
         }catch(FileNotFoundException e){
