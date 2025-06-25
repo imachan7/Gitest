@@ -2,7 +2,7 @@
 class UnionFindTester{
     public static void main(String[] args) {
         UnionFind kadai3_0 = new UnionFind(10);
-        System.out.println("aaa0を親1を子としてつなげる");
+        System.out.println("0を親1を子としてつなげる");
         kadai3_0.unite(0,1);
         System.out.println("0を親3を子としてつなげる");
         kadai3_0.unite(0,3);
